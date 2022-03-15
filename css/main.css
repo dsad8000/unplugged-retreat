@@ -130,11 +130,11 @@ p {
 }
  
 img {
- 
+  width: 100%; 
 }
  
 figure {
- 
+  margin: 0;
 }
  
 address {
@@ -168,6 +168,14 @@ header .content-wrapper {
   flex-flow: row wrap;
 }
 
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .header-divider {
   background: #3a3a3a;
   width: 100%;
@@ -178,8 +186,8 @@ header .content-wrapper {
 header nav {
   width: 60%;
   font-size: 1.125em;
-  text-transform: uppercase;
   font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -187,9 +195,13 @@ header nav {
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
@@ -231,10 +243,13 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url('../img/jake-melara-30679-unsplash.jpg') center no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: url('../img/jake-melara-30679-unsplash.png') no-repeat;
 }
 
 .hero-area h1 {
@@ -283,10 +298,12 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url('../img/rawpixel-800820-unsplash1.png');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: url('../img/rawpixel-800820-unsplash1.jpg') no-repeat;
 }
 
 .features h2 {
@@ -475,22 +492,39 @@ FAQ Page
    ========================================================================== */
 
    @media only screen and (min-width: 768px) {
-   /*General styles*/
+    /* Tablet styles here */
+
+    /*General styles*/
+
     .content-wrapper {
       max-width: 640px;
       margin: 100px 0;
     }
 
+    h2 {
+      font-size: 2.25em;
+      line-height: 1.333;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.25;
+    }
+
     /* Header */
 
     header {
-      padding: 33px;
+      padding: 33px 0;
       justify-content: space-around;
     }
     
     header .content-wrapper {
       width: 100%;
       justify-content: space-between;
+    }
+
+    header figure {
+      width: 30%;
     }
     
     header nav {
@@ -507,6 +541,16 @@ FAQ Page
 
     /* Hero Area */
 
+    .hero-area {
+      min-height: 600px;
+    }
+
+    .hero-area h1 {
+      font-size: 3em;
+      line-height: 1;
+      margin: 0;
+    }
+   
     /* Aside */
     aside .content-wrapper {
       margin: 50px 0;
@@ -520,8 +564,12 @@ FAQ Page
       width: 40%;
       margin: 0;
     }
-
+  
     /* Features */
+
+    .features h2 {
+      margin-bottom: 20px;
+    }
 
     .features article {
       display: flex;
@@ -532,7 +580,7 @@ FAQ Page
     }
 
     .features .features-item-description {
-      width: 50%;
+      width: 62%;
     }
 
     /* Reviews */
@@ -541,8 +589,21 @@ FAQ Page
       justify-content: space-between;
     }
 
+    .reviews h2 {
+      width: 85%;
+    }
+
+    .reviews article figure {
+      width: 100%;
+    }
+
     .reviews article div {
-      width: 50%;
+      width: 49%;
+    }
+
+    .reviews h3 {
+      margin: 0;
+      width: 75%;
     }
 
     /* Footer */
@@ -551,21 +612,30 @@ FAQ Page
       margin: 100px 0;
     }
 
-    .footer-content {
+    footer .footer-content {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      flex-direction: row;
     }
 
     footer .contact {
       margin-bottom: 0;
     }
 
-    footer .copyright {
-      width: 100%;
-      text-align: center;
+    footer h4 {
+      font-size: 1.5em;
+      margin-bottom: 40px;
     }
 
+    footer p {
+      line-height: 1.285;
+    }
+
+    footer .copyright {
+      width: 100%;
+    }
+  
     /* ==================================================================================
     About Page
     ===================================================================================*/
@@ -590,6 +660,10 @@ FAQ Page
       align-items: flex-start;
     }
 
+    .contact-content h4 {
+      font-size: 1.5em;
+    }
+
     /* ==================================================================================
     FAQ Page
     ===================================================================================*/
@@ -605,17 +679,45 @@ FAQ Page
     .faq h2 {
       width: 100%;
     }
+
+    .faq h4,
+    .faq p {
+      font-size: .875em;
+      line-height: 1.125;
+    }
    }
     
    @media only screen and (min-width: 1200px) {
    /*Desktop styles here*/
+
+   /* Header */
+
+   header {
+     padding: 15px 0;
+   }
+
    .content-wrapper {
      max-width: 960px;
    }
 
+   h2 {
+     font-size: 2.25em;
+   }
+
+   h3,
+   h4 {
+     font-size: 1.875em;
+   }
+
+   p {
+     font-size: 1.125em;
+     line-height: 1.333;
+   }
+
    /* Hero */
    .hero-area h1 {
-     width: 60%;
+     width: 80%;
+     font-size: 3.75em;
    }
 
    /* Aside */
@@ -626,6 +728,10 @@ FAQ Page
    aside .content-wrapper .form-description,
    aside .content-wrapper .form {
      width: 30%;
+   }
+
+   .form-description p {
+     font-size: 1.125em;
    }
 
    /* Features */
@@ -640,9 +746,19 @@ FAQ Page
    /* Reviews */
 
    .reviews article div {
-     width: 42%;
+     width: 49%;
    }
 
+   .reviews h2 {
+     padding-bottom: 50px;
+   }
+
+   /* Footer */
+
+   footer h4 {
+     font-size: 1.875em;
+   }
+  
    /* =======================================================================
    About Page
    ========================================================================= */
@@ -650,6 +766,11 @@ FAQ Page
    .mission h2, 
    .contact-section .content-wrapper h2 {
      width: 95%;
+     font-size: 3em;
+   }
+
+   .contact-content h4 {
+     font-size: 1.875em;
    }
 
    /* ========================================================================
@@ -658,8 +779,16 @@ FAQ Page
 
    .faq h2 {
      width: 100%;
+     font-size: 3em;
+   }
+
+   .faq h4,
+   .faq p {
+     font-size: 1.125em;
+     line-height: 1;
    }
   }
+
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
