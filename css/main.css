@@ -529,10 +529,16 @@ FAQ Page
     
     header nav {
       width: 20%;
+      font-size: 1em;
     }
    
-    .header nav ul {
+    header nav ul {
       justify-content: space-between;
+      padding: 0;
+    }
+
+    header nav ul li {
+      font-size: 1em;
     }
 
     .header-divider {
@@ -668,7 +674,7 @@ FAQ Page
     FAQ Page
     ===================================================================================*/
 
-    .faq content-wrapper {
+    .faq .content-wrapper {
       justify-content: space-between;
     }
 
@@ -694,6 +700,10 @@ FAQ Page
 
    header {
      padding: 15px 0;
+   }
+
+   header nav ul {
+     padding: 0 33px;
    }
 
    .content-wrapper {
