@@ -243,7 +243,7 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
-  background: url('../img/jake-melara-30679-unsplash.jpg') center no-repeat;
+  background: url('../img/jake-melara-30679-unsplash.jpg');
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -583,7 +583,7 @@ FAQ Page
 
     aside .content-wrapper .form-description,
     aside .content-wrapper .form {
-      width: 40%;
+      width: 35%;
       margin: 0;
     }
   
@@ -615,10 +615,7 @@ FAQ Page
       width: 85%;
     }
 
-    .reviews article figure {
-      width: 100%;
-    }
-
+    .reviews article figure,
     .reviews article div {
       width: 49%;
     }
@@ -670,6 +667,10 @@ FAQ Page
 
     .mission-content p {
       width: 45%;
+    }
+
+    .map figure {
+      padding-bottom: 45%;
     }
 
     .contact-section .content-wrapper h2 {
@@ -753,7 +754,7 @@ FAQ Page
 
    aside .content-wrapper .form-description,
    aside .content-wrapper .form {
-     width: 30%;
+     width: 40%;
    }
 
    .form-description p {
@@ -772,7 +773,7 @@ FAQ Page
    /* Reviews */
 
    .reviews article div {
-     width: 49%;
+     width: 42%;
    }
 
    .reviews h2 {
@@ -793,6 +794,10 @@ FAQ Page
    .contact-section .content-wrapper h2 {
      width: 95%;
      font-size: 3em;
+   }
+
+   .map figure {
+    padding-bottom: 37.5%;
    }
 
    .contact-content h4 {
